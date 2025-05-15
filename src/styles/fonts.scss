@@ -1,0 +1,11 @@
+$font-main:'Montserrat', sans-serif;
+
+@mixin font-header{
+    font-size:24px;
+    font-weight:500;
+}
+@mixin font-footer{
+    font-size:24px;
+    font-weight:500;
+    color:white;
+}
