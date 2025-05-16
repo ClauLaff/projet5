@@ -9,3 +9,13 @@ $font-main:'Montserrat', sans-serif;
     font-weight:500;
     color:white;
 }
+@mixin font-banner{
+    font-size:48px;
+    font-weight: 700;
+    color:white;
+}
+@mixin font-card{
+    font-size: 18px;
+    font-weight: 700;
+    color:white;
+}
