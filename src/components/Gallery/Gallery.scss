@@ -20,7 +20,7 @@
         flex-direction: column;
         justify-content:end;
         padding:15px;
-        @include font-card;
+        @include font-element;
 
        .card-name{
             height:15%;

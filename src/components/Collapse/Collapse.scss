@@ -1,0 +1,13 @@
+@import '/src/styles/colors.scss';
+@import '/src/styles/fonts.scss';
+
+
+.collapse-bar{
+    background-color: $red;
+    display:flex;
+    justify-content: space-between;
+    height:52px;
+    @include font-element;
+    padding:0 15px 0 15px;
+    
+}

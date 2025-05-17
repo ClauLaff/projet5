@@ -1,8 +1,14 @@
+import Collapse from "../../components/Collapse/Collapse";
+import "./About.scss";
+
 function About() {
   
 
     return (
-     <div>À propos</div>
+      <div className="menu">
+        <Collapse/>
+        <Collapse/>
+      </div>
     )
   }
   
