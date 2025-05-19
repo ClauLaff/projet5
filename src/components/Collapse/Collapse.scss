@@ -1,10 +1,21 @@
 @import '../../styles/colors.scss';
 @import '../../styles/fonts.scss';
 
+@mixin arrow-dimensions{
+    width:32px;
+    height:32px;
+}
+@mixin collapse-content-style{
+    height:fit-content;
+    padding:20px;
+    transform-origin: 50% 0%;
+    background-color: $grey;
+    @include font-text;
+}
 
 .collapse{
     display:flex;
-    flex-direction: column;  
+    flex-direction: column;
 
     .collapse-btn{
         background-color: $red;
@@ -15,18 +26,17 @@
         @include font-element;
         padding:0 15px 0 15px;
         align-items: center;
+        margin:none;
 
         .open{
-            width:32px;
-            height:32px;
+            @include arrow-dimensions;
             transform:rotate(0);
-            transition:transform 500ms;
+            transition:transform 300ms;
         }
         .closed{
-            width:32px;
-            height:32px;
+            @include arrow-dimensions;
             transform:rotate(180deg);
-            transition:transform 500ms;
+            transition:transform 300ms;
         }
         &:active .open{
             transform:rotate(180deg);
@@ -42,15 +52,16 @@
         }
     }
     .collapse-content-closed{
-        padding-top:20px;
-        transform-origin: 50% 0%;
+        @include collapse-content-style;
+        transition:transform 300ms ease-in-out 200ms;
         transform:scaleY(0);
-        transition:transform 500ms ease-in-out;
+        height:0px;
+        
     }
     .collapse-content-open{
-        padding-top:20px;
-        transform-origin: 50%0%;
+        @include collapse-content-style;
+        transition:transform 300ms ease-in;
         transform:scaleY(1);
-        transition:transform 500ms ease-in-out;
+        margin-bottom: 20px;
     }
 }

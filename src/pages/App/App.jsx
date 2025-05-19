@@ -8,7 +8,7 @@ function App() {
     <main>
       <div>
         <header>
-          <Banner/>
+          <Banner bannerName="banner-home" overlayName="overlay-home" innerText="Chez vous, partout et ailleurs"/>
         </header>
         <main>
           <Gallery/>

@@ -13,9 +13,15 @@ $font-main:'Montserrat', sans-serif;
     font-size:48px;
     font-weight: 700;
     color:white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+
 }
 @mixin font-element{
     font-size: 18px;
     font-weight: 700;
     color:white;
+}
+@mixin font-text{
+    font-size:18px;
+    font-weight: 400;
 }

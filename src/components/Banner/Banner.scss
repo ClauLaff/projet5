@@ -1,6 +1,6 @@
 @import '/src/styles/fonts.scss';
 
-.banner{
+@mixin banner-style{
     position:relative;
     height:223px;
     background-image: url(/src/assets/banner.png);
@@ -8,9 +8,10 @@
     background-size: cover;
     border-radius: 25px;
     margin-top:45px;
-    
-    .overlay{
-        position:absolute;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+@mixin overlay-style{
+     position:absolute;
         top: 0;
         left:0;
         right:0;
@@ -21,11 +22,26 @@
         border-radius: 25px;
         text-align: center;
         align-content: center;
+}
+
+.banner-home{
+    @include banner-style;
+    
+    .overlay-home{
+       @include overlay-style;
     }
     h1{
         @include font-banner;
+
     }
 }
 
+.banner-about{
+    @include banner-style;
+    background-image: url(/src/assets/banner-about.png);
 
-
+    .overlay-about{
+        @include overlay-style;
+        background-color:rgba(0,0,0,0.3);
+    }
+}
