@@ -1,0 +1,22 @@
+@import '/src/styles/fonts.scss';
+@import '/src/styles/colors.scss';
+
+.error-page{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    color:$red;
+    gap:75px;
+    margin:75px;
+    .error-code{
+        @include font-error-code;
+    }
+
+    .error-text{
+        @include font-error-text;
+    }
+
+    .error-lien-accueil{
+        text-decoration: underline;
+    }
+}

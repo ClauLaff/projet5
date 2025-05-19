@@ -25,3 +25,11 @@ $font-main:'Montserrat', sans-serif;
     font-size:18px;
     font-weight: 400;
 }
+@mixin font-error-code{
+    font-size:288px;
+    font-weight: 700;
+}
+@mixin font-error-text{
+    font-size:36px;
+    font-weight: 500;
+}
