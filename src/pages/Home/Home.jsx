@@ -1,4 +1,4 @@
-import './App.scss';
+import './Home.scss';
 import Banner from '/src/components/Banner/Banner.jsx';
 import Gallery from '/src/components/Gallery/Gallery.jsx';
 

@@ -16,7 +16,12 @@ $font-main:'Montserrat', sans-serif;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 
 }
-@mixin font-element{
+@mixin font-collapse{
+    font-size:24px;
+    font-weight:700;
+    color:white;
+}
+@mixin font-card{
     font-size: 18px;
     font-weight: 700;
     color:white;

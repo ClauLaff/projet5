@@ -1,11 +1,14 @@
 import logements from '/src/data/logements.json';
+import {Link} from "react-router";
 import './Gallery.scss';
 
 function Gallery(){
     return(
         <div className="gallery">
             {logements.map((logement)=>(
-                <div key={logement.id} className="card"><div className="card-name">{logement.title}</div></div>
+                <div key={logement.id} className="card" style={{backgroundImage:`url(${logement.cover})`, backgroundSize:'cover'}}>
+                    <Link className="card-name" to="/Logement">{logement.title}</Link>
+                </div>
             ))}
        </div>
     )

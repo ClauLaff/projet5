@@ -23,7 +23,7 @@
         height:52px;
         display:flex;
         justify-content: space-between;
-        @include font-element;
+        @include font-collapse;
         padding:0 15px 0 15px;
         align-items: center;
         margin:none;
