@@ -11,13 +11,14 @@
     background-color: $grey;
 
     .card{
-        width:340px;
+        width:91%;
         height:340px;
         border-radius: 10px;
         display:flex;
         flex-direction: column;
         justify-content:end;
         padding:15px;
+        background-size:cover;
 
        .card-name{
             height:15%;

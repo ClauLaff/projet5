@@ -1,0 +1,30 @@
+.carrousel{
+    position:relative;
+    display:flex;
+    flex-direction: row;
+    height:415px;
+    margin-top: 50px;
+    border-radius: 25px;
+    
+    img{
+        border-radius: 25px;
+    }
+    .btn-backward{
+        background-color:transparent;
+        border:none;
+        position:absolute;
+        top:50%;
+        left:5%;
+        transform:translate(-50%, -50%);
+        cursor:pointer;
+    }
+    .btn-forward{
+        background-color:transparent;
+        border:none;
+        position:absolute;
+        top:50%;
+        right:5%;
+        transform:translate(-50%, -50%);
+        cursor:pointer;
+    }
+}

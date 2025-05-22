@@ -2,7 +2,7 @@ import './Home.scss';
 import Banner from '/src/components/Banner/Banner.jsx';
 import Gallery from '/src/components/Gallery/Gallery.jsx';
 
-function App() {
+function Home() {
   
   return (
     <main>
@@ -18,4 +18,4 @@ function App() {
   )
 }
 
-export default App
+export default Home
