@@ -1,6 +1,5 @@
 import './Carrousel.scss';
-import '/src/data/logements.json';
-import { forwardRef, useState } from 'react';
+import { useState } from 'react';
 
 function Carrousel({pictures}){
    const [index, setIndex]=useState(0);

@@ -2,12 +2,14 @@
     position:relative;
     display:flex;
     flex-direction: row;
-    height:415px;
     margin-top: 50px;
     border-radius: 25px;
+    justify-content: center;
+    height:415px;
     
     img{
         border-radius: 25px;
+        width:100%;
     }
     .btn-backward{
         background-color:transparent;

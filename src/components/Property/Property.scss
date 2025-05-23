@@ -1,0 +1,92 @@
+@import '/src/styles/fonts.scss';
+
+.property{
+    display:flex;
+    flex-direction: column;
+
+    .informations{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+
+        .header{
+            display:flex;
+            justify-content: space-between;
+            align-items:start;
+            
+            .title-and-location{
+                display:flex;
+                flex-direction:column;
+
+                .title{
+                    @include font-property-title;
+                    margin:5px 0 5px 0;
+                }
+                .location{
+                    @include font-property-location;
+                    margin:0px;
+                }
+            }
+            .host{
+                display:flex;
+                gap:10px;
+                width:167px;
+                height:64px;
+                text-align: end;
+
+                .host-name{
+                    @include font-property-host-name;
+                }
+                .host-picture{
+                    border-radius: 50%;
+                    height:64px;
+                }
+            }
+        }
+        .tags-and-rating{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .tags{
+                display:flex;
+                gap:5px;
+
+                .tag{
+                    background-color: $red;
+                    border-radius: 10px;
+                    width:115px;
+                    text-align: center;
+                    @include font-propety-tag;
+                    padding:5px;
+
+                }
+            }
+            .rating{
+                display:flex;
+                gap:15px;
+            }
+        }
+        .description-and-equipments{
+            display:flex;
+            justify-content:space-between;
+            gap:50px;
+            
+            .description{
+                width:50%;
+                height:max-content;
+            }
+            .equipments{
+                width:50%;
+                
+                .list{
+                    list-style-type: none;
+                    padding-left: 0px;
+                }
+
+            }
+        }
+
+    }
+}
+               
