@@ -3,6 +3,7 @@ import './Property.scss';
 import Collapse from "../Collapse/Collapse";
 
 function Property(props){
+    
     const range=[1, 2, 3, 4, 5];
     const equipments=<ul className="list">{props.equipments.map((equipment, index)=>(<li key={index}>{equipment}</li>))}</ul>
 

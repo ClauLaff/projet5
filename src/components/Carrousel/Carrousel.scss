@@ -10,6 +10,7 @@
     img{
         border-radius: 25px;
         width:100%;
+        object-fit: cover;
     }
     .btn-backward{
         background-color:transparent;
@@ -28,5 +29,11 @@
         right:5%;
         transform:translate(-50%, -50%);
         cursor:pointer;
+    }
+    .picture-number{
+        color:white;
+        position:absolute;
+        top:85%;
+        left:50%;
     }
 }
