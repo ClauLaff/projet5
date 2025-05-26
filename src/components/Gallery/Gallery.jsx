@@ -9,7 +9,7 @@ function Gallery(){
         <div className="gallery">
             {logements.map((logement)=>(
                 <div key={logement.id} className="card" style={{backgroundImage:`url(${logement.cover})`}}>
-                    <Link className="card-name" to={`/Properties/${logement.id}`}>{logement.title}</Link>
+                    <Link className="card-name" to={`/Logement/${logement.id}`}>{logement.title}</Link>
                 </div>
             ))}
        </div>
