@@ -1,13 +1,13 @@
 @import '/src/styles/fonts.scss';
+@import '/src/styles/responsive.scss';
 
 @mixin banner-style{
     position:relative;
     height:223px;
-    background-image: url(/src/assets/banner.png);
+    background-image: url('/src/assets/banner.png');
     background-position: center;
     background-size: cover;
     border-radius: 25px;
-    margin-top:45px;
     box-shadow: 0px 4px 4px 0px #00000040;
 }
 @mixin overlay-style{
@@ -24,24 +24,46 @@
         align-content: center;
 }
 
-.banner-home{
-    @include banner-style;
+.banner{
     
-    .overlay-home{
-       @include overlay-style;
-    }
-    h1{
-        @include font-banner;
+    &-home{
+        @include banner-style;
+        
+        .overlay-home{
+        @include overlay-style;
+        }
+        h1{
+            @include font-banner;
 
+        }
+    }
+    &-about{
+        @include banner-style;
+        background-image: url('/src/assets/banner-about.png');
+
+        .overlay-about{
+            @include overlay-style;
+            background-color:rgba(0,0,0,0.3);
+        }
     }
 }
 
-.banner-about{
-    @include banner-style;
-    background-image: url(/src/assets/banner-about.png);
-
-    .overlay-about{
-        @include overlay-style;
-        background-color:rgba(0,0,0,0.3);
+@media (max-width:$mobile){      
+    .banner-home{
+        height:111px;
+        border-radius: 10px;
+        .overlay-home{
+            border-radius: 10px;
+        }
+        h1{
+            font-size: 24px;
+        }
+    }
+    .banner-about{
+        height:111px;
+        border: 10px;
+        .overlay-about{
+            border-radius: 10px;
+        }
     }
 }

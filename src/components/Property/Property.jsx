@@ -5,23 +5,25 @@ import Collapse from "../Collapse/Collapse";
 function Property(props){
     
     const range=[1, 2, 3, 4, 5];
-    const equipments=<ul className="list">{props.equipments.map((equipment, index)=>(<li key={index}>{equipment}</li>))}</ul>
+    const equipments=<ul className="list">{props.equipments.map((equipment, index)=>(<li key={index}>{equipment}</li>))}</ul>;
 
     return(
          <div className="property">
             <Carrousel pictures={props.pictures}/>
             <div className="informations">
-                <div className="header">
-                    <div className="title-and-location">
-                        <h1 className="title">{props.title}</h1>
-                        <p className="location">{props.location}</p>
+
+                <section className="title-and-host">
+                    <div className="title">
+                        <h1 className="title-text">{props.title}</h1>
+                        <p className="title-location">{props.location}</p>
                     </div>
                     <div className="host">
                         <p className="host-name">{props.host.name}</p>
                         <img className="host-picture" src={props.host.picture} alt="Photo de l'hôte"/>
                     </div>
-                </div>
-                <div className="tags-and-rating">
+                </section>
+
+                <section className="tags-and-rating">
                     <div className="tags">
                         {props.tags.map((tag, index)=>(
                             <div key={index} className="tag">{tag}</div>
@@ -32,11 +34,24 @@ function Property(props){
                             rangeElement<=props.rating?<img key={index} src="/src/assets/star-active.png" alt="étoile active"/>:<img key={index} src="/src/assets/star-inactive.png" alt="étoile inactive"/>
                         ))}
                     </div>
-                </div>
-                <div className="description-and-equipments">
+                </section>
+
+                <section className="rating-and-host-mobile">
+                    <div className="rating-mobile">
+                        {range.map((rangeElement, index)=>(
+                            rangeElement<=props.rating?<img key={index} src="/src/assets/star-active.png" alt="étoile active"/>:<img key={index} src="/src/assets/star-inactive.png" alt="étoile inactive"/>
+                        ))}
+                    </div>
+                    <div className="host-mobile">
+                        <p className="host-name-mobile">{props.host.name}</p>
+                        <img className="host-picture-mobile" src={props.host.picture} alt="Photo de l'hôte"/>
+                    </div>
+                </section>
+                
+                <section className="description-and-equipments">
                     <div className="description"><Collapse btnText="Description" contentText={props.description}/></div>
                     <div className="equipments"><Collapse btnText="Équipements" contentText={equipments}/></div>
-                </div>
+                </section>
             </div>
         </div>
     )  

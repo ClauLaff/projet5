@@ -6,13 +6,9 @@ function Home() {
   
   return (
     <main>
-      <div>
-        <header>
+      <div className="main">
           <Banner bannerName="banner-home" overlayName="overlay-home" innerText="Chez vous, partout et ailleurs"/>
-        </header>
-        <main>
           <Gallery/>
-        </main>
       </div>
     </main>
   )

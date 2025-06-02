@@ -1,5 +1,6 @@
 @import '../../styles/colors.scss';
 @import '../../styles/fonts.scss';
+@import '../../styles/responsive.scss';
 
 @mixin arrow-dimensions{
     width:32px;
@@ -24,45 +25,45 @@
         display:flex;
         justify-content: space-between;
         @include font-collapse;
-        padding:0 15px 0 15px;
+        padding:0px 15px 0px 15px;
         align-items: center;
-        margin:none;
         border-radius: 5px;
 
+        .closed{
+            @include arrow-dimensions;
+            transform:rotate(180deg);
+            transition:transform 100ms;
+        }
         .open{
             @include arrow-dimensions;
             transform:rotate(0);
             transition:transform 300ms;
         }
-        .closed{
-            @include arrow-dimensions;
-            transform:rotate(180deg);
-            transition:transform 300ms;
-        }
-        &:active .open{
-            transform:rotate(180deg);
-        }
-        &:active .closed{
-            transform:rotate(O);
-        }
-        &:active+.collapse-content-open{
-            transform:scaleY(0);
-        }
-        &:active+.collapse-content-closed{
-            transform:scaleY(1);
-        }
     }
     .collapse-content-closed{
-        @include collapse-content-style;
-        transition:transform 300ms ease-in-out 200ms;
+        @include collapse-content-style; 
         transform:scaleY(0);
-        height:0px;
-        
+        height:0px;  
     }
     .collapse-content-open{
         @include collapse-content-style;
-        transition:transform 300ms ease-in;
         transform:scaleY(1);
+        transition:transform 400ms;
         margin-bottom: 20px;
+    }
+}
+
+@media (max-width:$mobile){
+    .collapse{
+        .collapse-btn{
+            height:30px;
+            font-size: 13px;
+        }
+        .collapse-content-open{
+            font-size:13px;
+        }
+        .collapse-content-closed{
+            font-size:13px;
+        }
     }
 }

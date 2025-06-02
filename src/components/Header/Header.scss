@@ -1,27 +1,61 @@
 @import '/src/styles/fonts.scss';
+@import '/src/styles/responsive.scss';
 
 /**Bloc*/
 
 .header{
+    width:100%;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding-top:45px;
     @include font-header;
+    margin-bottom: 30px;
+    
 }
 
 /**Element*/
 
 nav{
     display:flex;
-    flex-direction: row;
-    gap:57px;
+    justify-content: end;
+    text-align: end;
+    gap:19%;
+   
 }
-a{
+a{  min-width:116px;
     text-decoration: none;
     color:black;
     &.active{
         text-decoration: underline;
     }
+    
+}
+
+@media (max-width:$tablet){
+    .header{
+        .logo{
+            width:75%;
+        }
+    }
+}
+
+@media (max-width:$mobile){
+    .header{
+        .logo{
+            width:95%;
+            height:47px;
+        }
+        nav{
+            width:50%;
+            text-transform: uppercase;
+            font-size:12px;
+            gap:10%;
+            a{
+                min-width:66px;
+            }
+        }
+    }
+    
 }
